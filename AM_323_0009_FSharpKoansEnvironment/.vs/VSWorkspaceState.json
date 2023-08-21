@@ -1,0 +1,11 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\FSharpKoans-fsharp",
+    "\\FSharpKoans-fsharp\\.devcontainer",
+    "\\FSharpKoans-fsharp\\FSharpKoans",
+    "\\FSharpKoans-fsharp\\FSharpKoans.Core",
+    "\\FSharpKoans-fsharp\\FSharpKoans.Test"
+  ],
+  "PreviewInSolutionExplorer": false
+}

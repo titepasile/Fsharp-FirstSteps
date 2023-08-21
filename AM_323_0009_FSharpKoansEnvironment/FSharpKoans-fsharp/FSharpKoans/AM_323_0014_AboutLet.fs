@@ -29,19 +29,19 @@ module ``about let`` =
         let typeOfX = x.GetType()
         
         //Ersetzen Sie die __ mit dem Wert des Symbols x
-        AssertEquality typeOfX typeof<FILL_ME_IN>
+        AssertEquality typeOfX typeof<int>
 
         let y = "a string"
         let expectedTypeOfY = y.GetType()
         
         //Ersetzen Sie die __ mit dem Wert des Symbols y
-        AssertEquality expectedTypeOfY typeof<FILL_ME_IN>
+        AssertEquality expectedTypeOfY typeof<string>
 
         let z = true
         let expectedTypeOfZ = z.GetType()
         
-        //Ersetzen Sie die __ mit dem Wert des Symbols y
-        AssertEquality expectedTypeOfZ typeof<FILL_ME_IN>
+        //Ersetzen Sie die __ mit dem Wert des Symbols z
+        AssertEquality expectedTypeOfZ typeof<bool>
 
     [<Koan>]
     //Sie können Typen explizit machen
@@ -52,8 +52,8 @@ module ``about let`` =
         let y:string = "forty two"
         let typeOfY = y.GetType()
 
-        AssertEquality typeOfX typeof<FILL_ME_IN>
-        AssertEquality typeOfY typeof<FILL_ME_IN>
+        AssertEquality typeOfX typeof<int>
+        AssertEquality typeOfY typeof<string>
 
         (* Normalerweise müssen Sie keine expliziten Typ-Annotationen für 
            lokale Variablen, aber Typ-Annotationen können in anderen Zusammenhängen nützlich sein 
@@ -84,7 +84,7 @@ module ``about let`` =
         let mutable x = 100
         x <- 200
 
-        AssertEquality x __
+        AssertEquality x 200
 
     [<Koan>]
     let YouCannotModifyALetBoundValueIfItIsNotMutable() =
@@ -97,4 +97,4 @@ module ``about let`` =
         // den Namen eines Wertes in einigen Fällen durch "Shadowing" wiederzuverwenden.
         let x = 100
          
-        AssertEquality x __
+        AssertEquality x 100

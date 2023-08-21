@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "aSUUxbhVUGEyg+dpiHIm3062y9VJHS6hTPD0IMXskrPsK+ZYBcSf4r4mWcME/08V21NRC37tvnUcTIqt1OnNYg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\school account\\Documents\\GitHub\\ideEinrichten\\ideEinrichten.fsproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\school account\\.nuget\\packages\\fsharp.core\\7.0.400\\fsharp.core.7.0.400.nupkg.sha512"
+  ],
+  "logs": []
+}

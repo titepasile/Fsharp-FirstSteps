@@ -14,36 +14,36 @@ module ``about strings`` =
     let StringValue() =
         let message = "hello"
 
-        AssertEquality message __
+        AssertEquality message "hello"
 
     [<Koan>]
     let StringConcatValue() =
         let message = "hello " + "world"
 
-        AssertEquality message __
+        AssertEquality message "hello world"
 
     [<Koan>]
     let FormattingStringValues() =
         let message = sprintf "F# turns it to %d!" 11
 
-        AssertEquality message __
+        AssertEquality message "F# turns it to 11!"
 
         //NOTE: Sie können printf verwenden, um auf die Standardausgabe zu drucken
 
         (* TRY IT: Was passiert, wenn man die 11 in etwas anderes als eine 
-                   eine Zahl ist? *)
+                   Zahl ist umschreibt? *)
 
     [<Koan>]
     let FormattingOtherTypes() =
         let message = sprintf "hello %s" "world"
 
-        AssertEquality message __
+        AssertEquality message "hello world"
 
     [<Koan>]
     let FormattingAnything() =
         let message = sprintf "Formatting other types is as easy as: %A" (1, 2, 3)
 
-        AssertEquality message __
+        AssertEquality message "Formatting other types is as easy as: (1, 2, 3)"
 
     (* NOTE: Für alle %formatters, die Sie bei der Zeichenkettenformatierung verwenden können  
              see: https://docs.microsoft.com/en-us/dotnet/fsharp/language-reference/plaintext-formatting *)
@@ -56,7 +56,11 @@ module ``about strings`` =
                         expiali\
                         docious"
 
-        AssertEquality message __
+        AssertEquality message "super\
+                        cali\
+                        fragilistic\
+                        expiali\
+                        docious"
 
     [<Koan>]
     let Multiline() =
@@ -66,8 +70,11 @@ module ``about strings`` =
                         five
                         lines"
 
-        AssertEquality
-              message __
+        AssertEquality message "This
+                        is
+                        on
+                        five
+                        lines"
 
     [<Koan>]
     let ExtractValues() =
@@ -79,15 +86,19 @@ module ``about strings`` =
  (* Ein einzelnes Zeichen wird durch einfache Anführungszeichen gekennzeichnet, Beispiel: 'c',
         keine doppelten Anführungszeichen wie bei einer Zeichenkette *)
            
-        AssertEquality first __
-        AssertEquality other __
+        AssertEquality first 'h'
+        AssertEquality other 'o'
 
     [<Koan>]
     let ApplyWhatYouLearned() =
-        (* Es ist an der Zeit, das bisher Gelernte anzuwenden. Füllen Sie die folgende Funktion aus, um
+        (* Es ist an der Zeit, das bisher Gelernte anzuwenden. Füllen Sie die folgende Funktion aus,
            damit die Asserts funktionieren *)
         let getFunFacts x =
-            __
+            let double = x * 2
+            let triple = x * 3
+            sprintf "%d doubled is %d, and %d tripled is %d!" x double x triple
+
+            
 
         let funFactsAboutThree = getFunFacts 3
         let funFactsAboutSix = getFunFacts 6

@@ -5,6 +5,8 @@
     <Name>FSharpKoans</Name>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="AM_323_0019_AboutUnit.fs" />
+    <Compile Include="AM_323_0018_AboutFunctions.fs" />
     <Compile Include="AM_323_0014_AboutLet.fs" />
     <Compile Include="AM_323_0015_AboutStrings.fs" />
     <Compile Include="AM_323_0013_AboutAsserts.fs" />

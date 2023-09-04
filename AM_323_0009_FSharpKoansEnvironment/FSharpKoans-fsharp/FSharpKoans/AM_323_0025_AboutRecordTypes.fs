@@ -21,8 +21,8 @@ module ``about record types`` =
     let RecordsHaveProperties() =
         let mario = { Name = "Mario"; Occupation = "Plumber"; }
 
-        AssertEquality mario.Name __
-        AssertEquality mario.Occupation __
+        AssertEquality mario.Name "Mario"
+        AssertEquality mario.Occupation "Plumber"
 
     [<Koan>]
     // Aus einem bestehenden Datensatz erstellen
@@ -30,11 +30,11 @@ module ``about record types`` =
         let mario = { Name = "Mario"; Occupation = "Plumber"; }
         let luigi = { mario with Name = "Luigi"; }
 
-        AssertEquality mario.Name __
-        AssertEquality mario.Occupation __
+        AssertEquality mario.Name "Mario"
+        AssertEquality mario.Occupation "Plumber"
 
-        AssertEquality luigi.Name __
-        AssertEquality luigi.Occupation __
+        AssertEquality luigi.Name "Luigi"
+        AssertEquality luigi.Occupation "Plumber"
 
     [<Koan>]
     // Records vergleichen
@@ -55,8 +55,8 @@ module ``about record types`` =
             else
                 "he is still kind of a koopa"
 
-        AssertEquality koopaComparison __
-        AssertEquality bowserComparison __
+        AssertEquality koopaComparison "all the koopas are pretty much the same"
+        AssertEquality bowserComparison "he is still kind of a koopa"
 
     [<Koan>]
     // Sie können Pattern Matches gegen Datensätze durchführen
@@ -70,6 +70,6 @@ module ``about record types`` =
             | { Occupation = "Plumber" } -> "good guy"
             | _ -> "bad guy"
 
-        AssertEquality (determineSide mario) __
-        AssertEquality (determineSide luigi) __
-        AssertEquality (determineSide bowser) __
+        AssertEquality (determineSide mario) "good guy"
+        AssertEquality (determineSide luigi) "good guy"
+        AssertEquality (determineSide bowser) "bad guy"

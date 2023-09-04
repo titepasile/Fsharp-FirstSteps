@@ -14,7 +14,7 @@ module ``about tuples`` =
     let CreatingTuples() =
         let items = ("apple", "dog")
         
-        AssertEquality items ("apple", __)
+        AssertEquality items ("apple", "dog")
         
     [<Koan>]
     let AccessingTupleElements() =
@@ -23,8 +23,8 @@ module ``about tuples`` =
         let fruit = fst items
         let animal = snd items
         
-        AssertEquality fruit __
-        AssertEquality animal __
+        AssertEquality fruit "apple"
+        AssertEquality animal "dog"
 
     [<Koan>]
     // Zugriff auf Tupel-Elemente mit Mustervergleichen
@@ -43,9 +43,9 @@ module ``about tuples`` =
         
         let fruit, animal, car = items
         
-        AssertEquality fruit __
-        AssertEquality animal __
-        AssertEquality car __
+        AssertEquality fruit "apple"
+        AssertEquality animal "dog"
+        AssertEquality car "Mustang"
         
     [<Koan>]
     // Ignorieren von Werten mit Mustervergleichen
@@ -54,7 +54,7 @@ module ``about tuples`` =
         
         let _, animal, _ = items
         
-        AssertEquality animal __
+        AssertEquality animal "dog"
     
     (* NOTE: Pattern Matching findet sich an vielen Stellen
              in F# zu finden, und wir werden später noch einmal darauf zurückkommen *)
@@ -68,8 +68,8 @@ module ``about tuples`` =
         let squared, cubed = squareAndCube 3.0
         
         
-        AssertEquality squared __
-        AssertEquality cubed __
+        AssertEquality squared 9.0
+        AssertEquality cubed 27.0
     
     (* THINK ABOUT IT: Gibt es wirklich mehr als einen Rückgabewert?
                        Welchen Typ gibt die Funktion squareAndCube
@@ -83,4 +83,4 @@ module ``about tuples`` =
             
         let result = squareAndCube 3.0
        
-        AssertEquality result __
+        AssertEquality result

@@ -5,6 +5,7 @@
     <Name>FSharpKoans</Name>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="AM_323_0043_MoreAboutFunctions.fs" />
     <Compile Include="AM_323_0033_AboutLists.fs" />
     <Compile Include="AM_323_0029_AboutTheOrderOfEvaluation.fs" />
     <Compile Include="AM_323_0024_AboutTuples.fs" />
